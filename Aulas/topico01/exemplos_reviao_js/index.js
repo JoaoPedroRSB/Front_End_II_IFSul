@@ -3,7 +3,7 @@ import exemploArraysFun from "./modules/exemploArraysFun.js";
 import pot, { Person, Person2, Person3, pow, pow2 } from "./modules/exemploFuncArrowFun.js";
 import { exemplosConst, exemplosLet } from "./modules/letConstExemplos.js"
 import numTypesExamples from "./modules/numTypes.js"
-
+import { exemplosConstroiObj , exemplosIteraObj } from "./modules/exObj.js"
 
 console.log("Exemplo 01 - TIPOS EM ECMASCRIPT")
 exemplosConst();
@@ -11,7 +11,7 @@ numTypesExamples();
 
 console.log("Exemplo 02 - STRINGS EM ECMASCRIPT")
 
-const curso = "Desenvolvimento Frontend II"
+const curso = "Desenvolvimento Front-End II"
 console.log(` Disciplina de ${curso}`);
 
 
@@ -58,3 +58,12 @@ exemploFind();
 exemploFilter();
 exemploMap();
 exemploReduce();
+
+
+
+
+console.log("Exemplo 07 - OBJETOS EM JAVASCRIPT");
+
+console.log(exemplosConstroiObj());
+console.log();
+console.log(exemplosIteraObj());
