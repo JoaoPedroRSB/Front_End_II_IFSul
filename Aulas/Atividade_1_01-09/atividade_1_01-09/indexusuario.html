@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Plataforma de Livraria Digital - compre e divulgue seus livros."
+    />
+    <title>Página Principal</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="indexusuario.html" class="logo"
+          ><em><u>BookVerse</u></em>
+        </a>
+
+        <button class="menu-toggle" aria-label="Abrir o Menu">&#9776;</button>
+
+        <ul class="menu">
+          <li class="auth-container">
+            <span class="auth-icon">👤 - Perfil</span>
+            <div class="auth-popup">
+              <p>Você ainda não está logado</p>
+              <button id="auth-login">Faça Login</button>
+              <button id="auth-cadastro">Inscreva-se Agora</button>
+            </div>
+          </li>
+          <li>
+            <div class="carrinho-container">
+              <img
+                src="/Projeto Final/Imagens/Icones/iconecarrinho.gif"
+                alt="Carrinho"
+                width="30"
+              />
+              <a href="#" id="link-carrinho"> - Carrinho</a>
+              <div class="popup-carrinho">
+                <p>Você precisa estar logado.</p>
+                <button id="btn-login-popup">Faça Login</button>
+                <button id="btn-cadastro-popup">Inscreva-se Agora</button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="estante-container">
+              <img
+                src="/Projeto Final/Imagens/Icones/iconeestante.png"
+                alt="Estante"
+                width="30"
+              />
+              <a href="#" id="link-estante"> - Estante</a>
+              <div class="popup-estante">
+                <p>Você precisa estar logado.</p>
+                <button id="btn-login-estante">Faça Login</button>
+                <button id="btn-cadastro-estante">Inscreva-se Agora</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="banner">
+        <hr />
+        <br />
+        <h1 id="descricao">Bem-vindo à nossa Livraria Digital</h1>
+        <p>Compre e explore novos livros online!</p>
+        <p>
+          Aqui você encontra uma vasta coleção de livros para todos os gostos,
+          desde clássicos atemporais até os mais recentes lançamentos. Explore,
+          descubra novas histórias e adquira suas próximas leituras com
+          facilidade. Nossa livraria digital oferece uma ampla variedade de
+          gêneros para todos os leitores!
+        </p>
+        <br />
+        <hr />
+      </section>
+
+      <section id="catalogo">
+        <h2 id="titulo" style="text-align: center">Nosso Catálogo de Livros</h2>
+        <br />
+
+        <div id="filtros">
+          <div class="campo-filtro">
+            <input
+              type="text"
+              id="filtro-titulo"
+              placeholder="Buscar por título"
+            />
+          </div>
+
+          <div class="campo-filtro">
+            <select id="filtro-genero">
+              <option value="">Todos os Gêneros</option>
+              <option value="fantasia">Fantasia</option>
+              <option value="ficcao">Ficção</option>
+              <option value="romance">Romance</option>
+              <option value="terror">Terror</option>
+              <option value="esporte">Esporte</option>
+              <option value="academico">Acadêmico</option>
+            </select>
+          </div>
+
+          <div class="campo-filtro">
+            <select id="filtro">
+              <option value="">Sem ordenação</option>
+              <option value="ordem-alfabetica">A-Z</option>
+              <option value="ordem-alfabetica-decrescente">Z-A</option>
+              <option value="mais-vendidos">Mais Vendidos</option>
+              <option value="menos-vendidos">Menos Vendidos</option>
+              <option value="lancamentos">Lançamentos</option>
+              <option value="melhor-avaliados">Mais Bem Avaliados</option>
+            </select>
+          </div>
+
+          <div class="campo-filtro">
+            <input
+              type="text"
+              id="filtro-colecao"
+              placeholder="Buscar por coleção"
+            />
+          </div>
+
+          <div class="campo-filtro">
+            <input
+              type="text"
+              id="filtro-editora"
+              placeholder="Buscar por editora"
+            />
+          </div>
+
+          <div class="campo-filtro">
+            <select id="formato" name="formato">
+              <option value="">Todos os formatos</option>
+              <option value="fisico">Físico</option>
+              <option value="digital">Digital (PDF/ePub)</option>
+            </select>
+          </div>
+
+          <button id="btn-filtrar">Pesquisar</button>
+        </div>
+
+        <div id="livros-container">
+          <!-- livros serão carregados dinamicamente via JavaScript -->
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        &copy; Endereço: Praça 20 de Setembro, 455 - Centro, Pelotas - RS,
+        96015-360 | Telefone: (53) 2123-1000 | E-mail:
+        joaopedrorodregueiro@gmail.com
+      </p>
+    </footer>
+
+    <script type="module" src="/src/indexusuario.js"></script>
+  </body>
+</html>

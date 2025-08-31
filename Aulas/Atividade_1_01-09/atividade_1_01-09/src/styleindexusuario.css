@@ -1,0 +1,362 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #111827; /* fundo escuro */
+  color: #f3f4f6; /* texto claro */
+  line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #8B0000;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+/* Botão menu hambúrguer */
+.menu-toggle {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+}
+
+/* Menu principal */
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: fixed;
+  top: 60px;
+  right: 20px;
+  background-color: #1f2937;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+  display: none;
+}
+
+.menu.active {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.menu li {
+  list-style: none;
+  position: relative;
+}
+
+.menu li a,
+.menu li button {
+  all: unset;
+  color: #f3f4f6;
+  font-weight: 600;
+  display: inline-block;
+  padding: 5px 0;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.menu li a:hover,
+.menu li button:hover {
+  text-decoration: underline;
+}
+
+.menu li a:focus,
+.menu li button:focus {
+  outline: 3px solid #facc15;
+  outline-offset: 3px;
+}
+
+/* Popups */
+.popup-carrinho,
+.popup-estante,
+.auth-popup {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 220px;
+  background-color: #1f2937;
+  color: #f3f4f6;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #3b82f6;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+  display: none;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 2000;
+}
+
+.popup-carrinho.active,
+.popup-estante.active,
+.auth-container:hover .auth-popup,
+.auth-popup:hover {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.popup-carrinho p,
+.popup-estante p,
+.auth-popup p {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.popup-carrinho button,
+.popup-estante button,
+.auth-popup button {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.popup-carrinho button:hover,
+.popup-estante button:hover,
+.auth-popup button:hover {
+  color: #2563eb;
+}
+
+.auth-icon {
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: #f3f4f6;
+  display: inline-block;
+}
+
+/* Banner */
+#banner {
+  background-color: #111827;
+  color: #f3f4f6;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#banner h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+#banner p {
+  max-width: 800px;
+  margin: 0 auto 10px auto;
+}
+
+/* Catálogo */
+#catalogo {
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+#catalogo h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #3b82f6;
+}
+
+/* Filtros */
+#filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+#filtros input,
+#filtros select,
+#filtros button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #1f2937;
+  color: #f3f4f6;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#filtros input:focus,
+#filtros select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+#btn-filtrar {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#btn-filtrar:hover {
+  background-color: #2563eb;
+}
+
+/* Grid de Livros */
+#livros-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.livro-card {
+  background-color: #1f2937;
+  color: #f3f4f6;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.livro-card:hover {
+  transform: scale(1.03);
+}
+
+.livro-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.livro-card h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.livro-card p {
+  font-size: 0.9rem;
+  margin-bottom: 3px;
+  color: #d1d5db;
+}
+
+.livro-card button {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.livro-card button:hover {
+  background-color: #2563eb;
+}
+
+.livro-card button:disabled {
+  background-color: #4b5563;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.estoque {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Rodapé */
+footer {
+  margin: 0;
+  padding: 15px 0;
+  background-color: #8B0000;
+  color: white;
+  text-align: center;
+}
+
+/* Accordion */
+.accordion-conteudo {
+  display: none;
+  background-color: #374151;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.livro-card:hover .accordion-conteudo {
+  display: block;
+}
+
+.sinopse-previa {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Acessibilidade */
+a:focus,
+button:focus,
+input:focus,
+select:focus {
+  outline: 3px solid #facc15;
+  outline-offset: 2px;
+  transition: outline 0.2s ease-in-out;
+}
+
+/* Responsividade para filtros */
+@media (max-width: 600px) {
+  #filtros {
+    flex-direction: column;
+  }
+}
