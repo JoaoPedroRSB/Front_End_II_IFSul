@@ -1,0 +1,107 @@
+/* ========== ESTILOS GLOBAIS ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(180deg, #0f172a, #111827);
+  color: #f3f4f6;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Container principal */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Links padrão */
+a {
+  color: #3b82f6;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #60a5fa;
+  text-decoration: underline;
+}
+
+/* Container dos cards */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 24px;
+}
+
+/* Filtros */
+#filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.campo-filtro input,
+.campo-filtro select {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #3b82f6;
+  background-color: #1e293b;
+  color: #f3f4f6;
+}
+
+#btn-filtrar {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #3b82f6, #2563eb);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#btn-filtrar:hover {
+  background: linear-gradient(90deg, #2563eb, #1d4ed8);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  body {
+    font-size: 0.95rem;
+  }
+
+  #filtros {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .campo-filtro {
+    width: 90%;
+  }
+}
+
+.link-button {
+  background: none;
+  border: none;
+  color: #3b82f6;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 1em;
+}
+
+.link-button:hover {
+  color: #60a5fa;
+}

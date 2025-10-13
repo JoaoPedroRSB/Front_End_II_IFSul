@@ -1,0 +1,130 @@
+.header {
+  background-color: #8B0000; /* vermelho escuro */
+  color: #f9fafb;
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #1e293b;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-style: italic;
+  text-decoration: none;
+  color: #f9fafb; /* branco */
+  font-weight: 700;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.logo:hover {
+  color: #fcd34d;
+  transform: scale(1.05);
+}
+
+/* Botão menu hamburguer - sempre visível */
+.menu-toggle {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  color: #f9fafb;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  z-index: 1100;
+}
+
+.menu-toggle:hover {
+  color: #fcd34d;
+}
+
+/* Menu principal - dropdown */
+.menu {
+  position: absolute;
+  top: 65px;
+  right: 25px;
+  background-color: #1f2937;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  display: none; /* escondido até abrir */
+  width: 200px;
+  z-index: 1001;
+}
+
+.menu.menu-open {
+  display: flex;
+}
+
+.menu li {
+  list-style: none;
+}
+
+/* Ajuste links e itens do menu */
+.menu li .auth-icon,
+.menu li .icon-wrapper {
+  cursor: pointer;
+  color: #e5e7eb;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.menu li .auth-icon:hover,
+.menu li .icon-wrapper:hover {
+  color: #fcd34d;
+}
+
+/* Popups internos */
+.auth-popup,
+.popup-carrinho,
+.popup-estante {
+  background-color: #1e293b;
+  color: #f3f4f6;
+  padding: 10px 12px;
+  margin-top: 8px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  font-size: 0.9rem;
+}
+
+.auth-popup button,
+.popup-carrinho button,
+.popup-estante button {
+  margin-top: 6px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  background: linear-gradient(90deg, #3b82f6, #2563eb);
+  color: white;
+  transition: background 0.3s ease;
+}
+
+.auth-popup button:hover,
+.popup-carrinho button:hover,
+.popup-estante button:hover {
+  background: linear-gradient(90deg, #2563eb, #1d4ed8);
+}
+
+/* RESPONSIVO: mantém comportamento igual */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: nowrap;
+  }
+}
