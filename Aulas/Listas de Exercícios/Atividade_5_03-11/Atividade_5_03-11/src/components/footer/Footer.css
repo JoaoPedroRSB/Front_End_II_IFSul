@@ -1,0 +1,56 @@
+.footer {
+  background-color: #8B0000; /* vermelho escuro */
+  color: #f1f5f9;
+  text-align: center;
+  padding: 24px 0;
+  font-size: 0.95rem;
+  border-top: 1px solid #1e293b;
+  margin-top: 40px;
+  box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.4);
+  border-radius: 12px 12px 0 0;
+  transition: all 0.3s ease;
+}
+
+/* Links */
+.footer a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 10px;
+  transition: color 0.2s ease;
+}
+
+.footer a:hover {
+  color: #fcd34d;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+  text-decoration: underline;
+}
+
+/* Linha */
+.footer hr {
+  width: 60%;
+  border: none;
+  border-top: 1px solid #1e293b;
+  margin: 10px auto 15px auto;
+}
+
+/* Texto secundário */
+.footer p {
+  color: #e2e8f0;
+  font-size: 0.85rem;
+  margin-top: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .footer {
+    font-size: 0.85rem;
+    padding: 20px 10px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .footer a {
+    display: inline-block;
+    margin: 5px 8px;
+  }
+}
