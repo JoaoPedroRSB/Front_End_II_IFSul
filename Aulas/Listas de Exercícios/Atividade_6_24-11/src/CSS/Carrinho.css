@@ -1,0 +1,140 @@
+/* === ESTILIZAÇÃO GERAL DO CARRINHO === */
+.carrinho {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #111;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.carrinho h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: white;
+}
+
+/* === LISTA DE ITENS DO CARRINHO === */
+.lista-carrinho {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.item-carrinho {
+  display: flex;
+  align-items: center;
+  background-color: #1a1a1a;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+}
+
+.item-carrinho img {
+  width: 80px;
+  height: auto;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+/* === INFORMAÇÕES DO LIVRO === */
+.info-livro {
+  flex: 1;
+}
+
+.info-livro h2 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.info-livro p {
+  margin: 5px 0;
+}
+
+/* === CONTROLE DE QUANTIDADE === */
+.quantidade-controle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.quantidade-controle label {
+  font-size: 0.9em;
+}
+
+.quantidade-controle input {
+  width: 60px;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: #222;
+  color: #fff;
+  font-size: 1em;
+  outline: none;
+}
+
+.quantidade-controle input::-webkit-inner-spin-button {
+  filter: invert(1);
+}
+
+/* === SUBTOTAL === */
+.subtotal {
+  font-weight: bold;
+  margin-top: 8px;
+  color: #00ff99;
+}
+
+/* === BOTÃO DE REMOVER === */
+.info-livro button {
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.info-livro button:hover {
+  background-color: #cc0000;
+}
+
+/* === TOTAL GERAL === */
+.total-geral {
+  margin-top: 30px;
+  text-align: right;
+  font-size: 1.4em;
+  color: #00ff99;
+  border-top: 2px solid #333;
+  padding-top: 15px;
+}
+
+/* Botão Finalizar */
+#btn-finalizar {
+  margin-top: 30px;
+  background-color: #3B82F6;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin-left: auto;
+}
+
+#btn-finalizar:hover {
+  background-color: #2563eb;
+}
+
+#btn-finalizar:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
