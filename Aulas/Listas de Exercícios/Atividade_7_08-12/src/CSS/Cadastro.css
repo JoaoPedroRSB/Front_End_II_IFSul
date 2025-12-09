@@ -1,0 +1,97 @@
+/* ====== Layout geral ====== */
+.cadastro-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* começa do topo, para expandir naturalmente */
+  min-height: 100vh;
+  background-color: #0d1117;
+  color: #e0e0e0;
+  font-family: "Inter", sans-serif;
+  padding: 40px 0; /* espaço acima e abaixo */
+  overflow-y: auto; /* permite rolagem */
+}
+
+/* ====== Card ====== */
+.cadastro-card {
+  background-color: #1c2530;
+  padding: 40px 50px;
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 550px;
+  text-align: center;
+  margin: auto; /* centraliza horizontalmente */
+}
+
+/* ====== Título ====== */
+.cadastro-card h1 {
+  color: #3a8ef6;
+  font-size: 2.4rem;
+  margin-bottom: 25px;
+}
+
+/* ====== Formulário ====== */
+.cadastro-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+.cadastro-form label {
+  font-weight: 600;
+  color: #c9d1d9;
+}
+
+.cadastro-form input,
+.cadastro-form select {
+  background-color: #0d1117;
+  color: #fff;
+  border: 1px solid #3a8ef6;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.cadastro-form input:focus,
+.cadastro-form select:focus {
+  outline: none;
+  border-color: #60a5fa;
+  box-shadow: 0 0 4px #3b82f6;
+}
+
+/* ====== Botão principal ====== */
+.cadastro-form button[type="submit"] {
+  background-color: #3a8ef6;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cadastro-form button[type="submit"]:hover {
+  background-color: #2563eb;
+}
+
+/* ====== Link de login ====== */
+.cadastro-card p {
+  margin-top: 20px;
+  color: #e0e0e0;
+}
+
+.link-button {
+  background: none;
+  border: none;
+  color: #3a8ef6;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.link-button:hover {
+  color: #60a5fa;
+}
